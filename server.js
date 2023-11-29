@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(homePage)); 
 })
 
+app.get('/status', (req, res) => {
+    res.json({
+        message: 'Up'
+    }); 
+})
+
 app.listen(PORT, () => {
     console.log(`Server started at ${PORT}`);
 })
